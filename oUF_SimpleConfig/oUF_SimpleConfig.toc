@@ -1,0 +1,22 @@
+## Interface: 100000
+
+## Title: oUF_SimpleConfig
+## Notes: oUF_Simple config
+## Author: Pingumania, zork
+
+## RequiredDeps: rLib
+
+init.lua
+global.lua
+tags.lua
+player.lua
+target.lua
+targettarget.lua
+pet.lua
+focus.lua
+mouseover.lua
+party.lua
+boss.lua
+nameplate.lua
+raid.lua
+arena.lua

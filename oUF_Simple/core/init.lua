@@ -12,13 +12,7 @@ L.addonName       = A
 L.dragFrames      = {}
 L.addonColor      = "00FF3300"
 L.addonShortcut   = "ouf_simple"
+L.Retail          = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 
 --get the config
 L.C = oUF_SimpleConfig
-
------------------------------
--- rLib slash command
------------------------------
-
---create slash commands
-rLib:CreateSlashCmd(L.addonName, L.addonShortcut, L.dragFrames, L.addonColor)

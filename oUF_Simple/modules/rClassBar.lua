@@ -19,7 +19,7 @@ local SPELL_POWER_CHI = Enum.PowerType.Chi or 12
 local SPELL_POWER_ARCANE_CHARGES = Enum.PowerType.ArcaneCharges or 16
 
 do
-  if rLib.Retail then
+  if L.Retail then
     if(PlayerClass == 'MONK') then
       ClassPowerID = SPELL_POWER_CHI
       ClassPowerType = 'CHI'

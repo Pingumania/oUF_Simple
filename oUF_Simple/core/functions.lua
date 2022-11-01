@@ -802,10 +802,3 @@ local function SetupFrame(self)
   self:SetPoint(unpack(self.cfg.point))
 end
 L.F.SetupFrame = SetupFrame
-
---CreateDragFrame
-local function CreateDragFrame(self)
-  if not self.settings.createDrag then return end
-  rLib:CreateDragFrame(self, L.dragFrames, -2, true)
-end
-L.F.CreateDragFrame = CreateDragFrame

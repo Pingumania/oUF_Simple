@@ -24,7 +24,7 @@ if L.F.CreatePartyStyle then oUF:RegisterStyle(A.."Party", L.F.CreatePartyStyle)
 if L.F.CreateBossStyle then oUF:RegisterStyle(A.."Boss", L.F.CreateBossStyle) end
 if L.F.CreateNamePlateStyle then oUF:RegisterStyle(A.."Nameplate",L.F.CreateNamePlateStyle) end
 if L.F.CreateRaidStyle then oUF:RegisterStyle(A.."Raid", L.F.CreateRaidStyle) end
-if rLib.Retail and L.F.CreateArenaStyle then oUF:RegisterStyle(A.."Arena", L.F.CreateArenaStyle) end
+if L.Retail and L.F.CreateArenaStyle then oUF:RegisterStyle(A.."Arena", L.F.CreateArenaStyle) end
 
 -----------------------------
 -- Spawn Units
@@ -37,13 +37,13 @@ if L.F.CreatePlayerStyle then
   --show/hide the frame on a given state driver
   if player.cfg.frameVisibility then
     player:Disable()
-    --frameVisibility needed for rLib drag and drop
+    --frameVisibility needed for drag and drop
     player.frameVisibility = player.cfg.frameVisibility
     RegisterStateDriver(player, "visibility", player.cfg.frameVisibility)
   end
   --OnShow fader
   if player.cfg.fader then
-    rLib:CreateFrameFader(player, player.cfg.fader)
+    L.F.CreateFrameFader(player, player.cfg.fader)
   end
 end
 
@@ -53,7 +53,7 @@ if L.F.CreateTargetStyle then
   local target = oUF:Spawn("target", A.."Target")
   --OnShow fader
   if target.cfg.fader then
-    rLib:CreateFrameFader(target, target.cfg.fader)
+    L.F.CreateFrameFader(target, target.cfg.fader)
   end
 end
 
@@ -70,13 +70,13 @@ if L.F.CreatePetStyle then
   --show/hide the frame on a given state driver
   if pet.cfg.frameVisibility then
     pet:Disable()
-    --frameVisibility needed for rLib drag and drop
+    --frameVisibility needed for drag and drop
     pet.frameVisibility = pet.cfg.frameVisibility
     RegisterStateDriver(pet, "visibility", pet.cfg.frameVisibility)
   end
   --OnShow fader
   if pet.cfg.fader then
-    rLib:CreateFrameFader(pet, pet.cfg.fader)
+    L.F.CreateFrameFader(pet, pet.cfg.fader)
   end
 end
 
@@ -185,8 +185,8 @@ if L.F.CreateArenaStyle then
   --constant MAX_ARENA_ENEMIES is part of the blizzard arena ui addon which is not loaded on init
   for i = 1, 5 do
     arena[i] = oUF:Spawn("arena"..i, A.."Arena"..i)
-    arena[i].PostUpdate = rLib.Retail and PostUpdate
-    if rLib.Retail and arena[i].Power then
+    arena[i].PostUpdate = L.Retail and PostUpdate
+    if L.Retail and arena[i].Power then
       arena[i].Power.OverrideArenaPreparation = OverrideArenaPreparation
     end
     if (i == 1) then

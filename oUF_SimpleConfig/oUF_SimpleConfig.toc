@@ -4,7 +4,7 @@
 ## Notes: oUF_Simple config
 ## Author: Pingumania, zork
 
-## RequiredDeps: rLib
+## RequiredDeps: oUF_Simple
 
 init.lua
 global.lua

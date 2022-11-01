@@ -4,7 +4,7 @@
 ## Notes: Simple oUF layout
 ## Author: Pingumania, zork
 
-## RequiredDeps: oUF, rLib, oUF_SimpleConfig
+## RequiredDeps: oUF, oUF_SimpleConfig
 
 modules\rAbsorbBar.lua
 modules\rClassBar.lua
@@ -12,6 +12,7 @@ modules\oUF_DebuffHighlight.lua
 
 core\init.lua
 core\functions.lua
+core\framefader.lua
 core\tags.lua
 core\style.lua
 

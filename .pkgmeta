@@ -1,0 +1,12 @@
+package-as: oUF_Simple
+
+move-folders:
+  oUF_Simple/oUF_Simple: oUF_Simple
+  oUF_Simple/oUF_SimpleConfig: oUF_SimpleConfig
+
+ignore:
+  - CHANGELOG.md
+
+manual-changelog:
+  filename: RECENT_CHANGES.md
+  markup-type: markdown
